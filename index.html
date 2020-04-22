@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/2df3881e9c.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Crypto Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <link rel="shortcut icon" href="./btc@2x.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <link rel="stylesheet" href="./style2.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="nav-content" class="navbar navbar-default">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"
+          >Crypto <i class="fab fa-btc"></i> Calculator</a
+        >
+      </div>
+    </nav>
+    <nav id="nav-content2" class="navbar navbar-default"></nav>
+    <section class="section">
+      <div class="toggle-container">
+        <input type="checkbox" id="switch" name="theme" />
+        <label id="label" for="switch">Light/Dark</label>
+      </div>
+    </section>
+    <!--**************************************************************************-->
+
+    <!--*******************************************************************************-->
+
+    <section class="section">
+      <div class="columns">
+        <div class="column is-three-quarters">
+          <div class="card">
+            <div class="card-content">
+              <form id="form">
+                <!--TYPE SELECTION-->
+                <div class="level">
+                  <!--Left side-->
+                  <div class="level-left is-marginless">
+                    <div class="level-item">
+                      <p class="number">1</p>
+                      Select the type of cryptocurrency
+                    </div>
+                  </div>
+                  <!--Right-->
+                  <div class="level-right">
+                    <div class="level-item">
+                      <div class="field">
+                        <div class="grid-container">
+                          <div class="grid-item">
+                            <input
+                              id="serviceTip"
+                              class="serviceTip"
+                              type="radio"
+                              value="12"
+                              name="tipVal"
+                            /><label for="serviceTip" class="label1">
+                              <span
+                                >Bitcoin
+                                <img
+                                  class="bitIcons"
+                                  src="./btc@2x.png"
+                                  width="19%"
+                                />
+                                (BTC)</span
+                              >
+                            </label>
+                          </div>
+                          <div class="grid-item">
+                            <input
+                              id="serviceTip"
+                              class="serviceTip"
+                              type="radio"
+                              value="15"
+                              name="tipVal"
+                            /><label for="serviceTip" class="label1">
+                              <span
+                                >Cardano
+                                <img
+                                  class="bitIcons"
+                                  src="./ada@2x.png"
+                                  width="19%"
+                                />(ADA)</span
+                              >
+                            </label>
+                          </div>
+                          <div class="grid-item">
+                            <input
+                              id="serviceTip"
+                              class="serviceTip"
+                              type="radio"
+                              value="18"
+                              name="tipVal"
+                            /><label for="serviceTip" class="label1">
+                              <span
+                                >Ethereum
+                                <img
+                                  class="bitIcons"
+                                  src="./eth@2x.png"
+                                  width="19%"
+                                />
+                                (ETH)</span
+                              >
+                            </label>
+                          </div>
+                          <div class="grid-item">
+                            <input
+                              id="serviceTip"
+                              class="serviceTip"
+                              type="radio"
+                              value="20"
+                              name="tipVal"
+                            /><label for="serviceTip" class="label1">
+                              <span
+                                >Litecoin
+                                <img
+                                  class="bitIcons"
+                                  src="./ltc@2x.png"
+                                  width="19%"
+                                />
+                                (LTC)</span
+                              >
+                            </label>
+                          </div>
+                          <div class="grid-item">
+                            <input
+                              id="serviceTip"
+                              class="serviceTip"
+                              type="radio"
+                              value="22"
+                              name="tipVal"
+                            /><label for="serviceTip" class="label1">
+                              <span
+                                >Ripple
+                                <img
+                                  class="bitIcons"
+                                  src="./xrp@2x.png"
+                                  width="19%"
+                                />
+                                (XRP)</span
+                              >
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Currency SELECTION-->
+                <!--TYPE SELECTION-->
+                <div class="level">
+                  <!--Left side-->
+                  <div class="level-left is-marginless">
+                    <div class="level-item">
+                      <p class="number">2</p>
+                      Select the currency
+                    </div>
+                  </div>
+                  <!--Right-->
+                  <div class="level-right">
+                    <div class="level-item">
+                      <div class="field">
+                        <div class="grid-container">
+                          <div class="grid-item">
+                            <input
+                              id="serviceCurr"
+                              type="radio"
+                              value="USD"
+                              name="currVal"
+                            /><label for="serviceCurr" class="label1">
+                              <span>USD</span>
+                            </label>
+                          </div>
+                          <div class="grid-item">
+                            <input
+                              id="serviceCurr"
+                              type="radio"
+                              value="INR"
+                              name="currVal"
+                            /><label for="serviceCurr" class="label1">
+                              <span>INR</span>
+                            </label>
+                          </div>
+                          <div class="grid-item">
+                            <input
+                              id="serviceCurr"
+                              type="radio"
+                              value="EUR"
+                              name="currVal"
+                            /><label for="serviceCurr" class="label1">
+                              <span>EUR</span>
+                            </label>
+                          </div>
+                          <div class="grid-item">
+                            <input
+                              id="serviceCurr"
+                              type="radio"
+                              value="GBP"
+                              name="currVal"
+                            /><label for="serviceCurr" class="label1">
+                              <span>GBP</span>
+                            </label>
+                          </div>
+                          <div class="grid-item">
+                            <input
+                              id="serviceCurr"
+                              type="radio"
+                              value="JPY"
+                              name="currVal"
+                            /><label for="serviceCurr" class="label1">
+                              <span>JPY</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--NUMBER OF ITEMS-->
+
+                <div class="level">
+                  <div class="level-left is-marginless">
+                    <div class="level-item">
+                      <p id="ques" class="number">3</p>
+                      How many coins?
+                    </div>
+                  </div>
+                  <!--Right-->
+                  <div class="level-right">
+                    <div class="level-item">
+                      <div class="field">
+                        <div class="control has-icons-right">
+                          <input
+                            class="input"
+                            id="bitAmount"
+                            type="number"
+                            min="0"
+                          />
+                          <span class="icon is-small is-right">
+                            <i class="fas fa-coins"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="control">
+                  <button
+                    class="button is-large is-fullwidth is-primary is-outlined"
+                    id="btnCalculate"
+                  >
+                    Calculate
+                  </button>
+                </div>
+              </form>
+              <div class="control">
+                <button
+                  class="button is-large is-fullwidth is-danger is-outlined"
+                  onclick="myButton()"
+                >
+                  Reset
+                </button>
+                <script>
+                  function myButton() {
+                    location.reload();
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="columns is-multiline">
+        <div class="coulumn is-12-tablet is-6-desktop is-3-widescreen">
+          <div class="notification is-success has-text">
+            <p id="outAmount" class="title is-1"></p>
+            <p id="restext" class="subtitle is-4"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script src="./app.js"></script>
+  <script>
+    var selected = document.getElementById("serviceTip");
+    for (var i = 0; i < selected.length; i++) {
+      (function (index) {
+        selected[index].addEventListener("change", function () {
+          var ques = document.getElementById("ques");
+          ques.innerHTML = `How many `;
+        });
+      });
+    }
+
+    var checkbox = document.querySelector("input[name=theme]");
+
+    checkbox.addEventListener("change", function () {
+      if (this.checked) {
+        trans();
+        document.documentElement.setAttribute("data-theme", "dark");
+      } else {
+        trans();
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    });
+
+    let trans = () => {
+      document.documentElement.classList.add("transition");
+      window.setTimeout(() => {
+        document.documentElement.classList.remove("transition");
+      }, 1000);
+    };
+  </script>
+</html>
